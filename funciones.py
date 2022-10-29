@@ -8,11 +8,13 @@ def modofacil():
         num=input("Ingresar un número, e intentar acertar el número aleatorio o ingresar x para salir: \n")
         print("")
 
-        while not num.isnumeric() and num != "x".lower() or int(num)>20:        
+        while not num.isnumeric() or int(num)>20:
+            if num == "X".lower(): #Si el valor es el string "x", rompe la excepcion.
+                break
             num=input("Ingresar variables numéricas, e intentar acertar el número aleatorio: \n")
             print("")
 
-        if num == "X".lower(): #Si el valor es el string "x", rompe el for
+        if num == "X".lower(): #Si el valor es el string "x", rompe el for.
             break
 
         if int(num)==x: #Si num es de tipo entero y su valor es igual que el de x, ganas la partida
@@ -37,9 +39,13 @@ def mododificil(): #Aca el codigo es igual, pero sin la parte de mostrar si el v
     for n in range(12):    
         num=input("Ingresar un número, e intentar acertar el número aleatorio o ingresar x para salir: \n")
         print("")
-        while not num.isnumeric() and num != "x".lower() or int(num)>20:        
+        
+        while not num.isnumeric() or int(num)>20:
+            if num == "X".lower():
+                break
             num=input("Ingresar variables numéricas, e intentar acertar el número aleatorio: \n")
             print("")
+            
         if num == "X".lower():
             break
 
